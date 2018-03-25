@@ -1,0 +1,32 @@
+<!DOCKTYPE html>
+				<html>
+					<head>
+						<script src="js.js"></script>
+						<title>Cryptocoins</title>
+						<meta name="viewport" content="width=device-width, initial-scale=1.0">
+						<link rel="stylesheet" type="text/css" href="css.css">
+						<link rel="manifest" href="manifest.json">
+					</head>
+					<body>
+					<div id="title">
+					<ul id="namelogolist">
+					<li class="list"><p id="coinname" class="txt">coin</p></li>
+					<br><br>
+					<li class="list"><img id="coinlogo" src="images/coin.png"></img></li>
+					</ul>
+					<br><br><br><br>
+					<p id="money">money: 1000$</p>
+					<p  id="coin">coins: 0</p>
+					</div>
+					<div id="setup">
+					<br>
+					<p class="txt">Coin name:<input id="coinNameinp" type="text" name="coinName" maxlength="5"><br></p>
+					<a id="updatename" class="button" onclick="nameupdate()">Start</a>
+					</div>
+					<div id="game">
+					<p class="txt" id="value"></p>
+					<a id="buy" class="txt" onclick="buy()">buy</a>
+					<a id="sell" class="txt" onclick="sell()">sell</a>
+					</div>
+					</body>
+				</html>

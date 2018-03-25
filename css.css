@@ -1,0 +1,95 @@
+body {
+}
+
+.txt {
+	
+}
+
+.button {
+	border-style:solid;
+	border:5px;
+	cursor:pointer;
+}
+
+#coinname {
+	font-size:30px;
+	margin-top:45px;
+}
+
+#coinlogo {
+	width:40px;
+	margin-top:8px;
+}
+
+#money {
+	font-size:20px;
+}
+
+#coin {
+	font-size:20px;
+}
+
+#namelogolist {
+	display:inline;
+	list-style-type: none;
+}
+
+.list {
+float: left;
+padding:0px 2px;
+}
+
+#title {
+	margin-top:-30px;
+}
+
+#coinNameinp {
+display:block;
+}
+
+#updatename {
+	background-color:#000;
+	color:white;
+	padding:5px;
+}
+
+#game {
+	display:none;
+}
+
+#value {
+	font-size:35px;
+}
+
+#buysell {
+	-webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+    -khtml-user-select: none; /* Konqueror HTML */
+	moz-user-select: none; /* Firefox */
+    -ms-user-select: none; /* Internet Explorer/Edge */
+    user-select: none;
+	list-style-type: none;
+	float:left;
+    display:inline;
+}
+
+#buy {
+	border-style:solid;
+	padding:2px 8px;
+	background-color:black;
+	color:white;
+	display:inline;
+	font-size:30px;
+	cursor:pointer;
+	margin:0px 52px 0 0;
+}
+
+#sell {
+	border-style:solid;
+	padding:2px 8px;
+	background-color:black;
+	color:white;
+	display:inline;
+	font-size:30px;
+	cursor:pointer;
+}

@@ -1,0 +1,26 @@
+{
+  "short_name": "Cryptocoins",
+  "name": "Cryptocoins",
+    "icons": [
+    {
+      "src": "images/coin.png",
+      "sizes": "96x96",
+      "type": "image/png"
+    },
+    {
+      "src": "images/coin.png",
+      "sizes": "144x144",
+      "type": "image/png"
+    },
+    {
+      "src": "images/coin.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    }
+  ],
+  "start_url": "index.html",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "white",
+  "theme_color": "black"
+}
