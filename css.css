@@ -62,11 +62,6 @@ display:block;
 }
 
 #buysell {
-	-webkit-touch-callout: none; /* iOS Safari */
-    -webkit-user-select: none; /* Safari */
-    -khtml-user-select: none; /* Konqueror HTML */
-	moz-user-select: none; /* Firefox */
-    -ms-user-select: none; /* Internet Explorer/Edge */
     user-select: none;
 	list-style-type: none;
 	float:left;
@@ -74,6 +69,11 @@ display:block;
 }
 
 #buy {
+		-webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+    -khtml-user-select: none; /* Konqueror HTML */
+	moz-user-select: none; /* Firefox */
+    -ms-user-select: none; /* Internet Explorer/Edge */
 	border-style:solid;
 	padding:2px 8px;
 	background-color:black;
@@ -85,6 +85,11 @@ display:block;
 }
 
 #sell {
+		-webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+    -khtml-user-select: none; /* Konqueror HTML */
+	moz-user-select: none; /* Firefox */
+    -ms-user-select: none; /* Internet Explorer/Edge */
 	border-style:solid;
 	padding:2px 8px;
 	background-color:black;

@@ -1,8 +1,7 @@
 var name;
 var price = 0;
-var money = 1000;
+var money = 100;
 var coin = 0;
-var money = 1000;
 
 
 function nameupdate() {
@@ -20,8 +19,13 @@ document.getElementById("value").innerHTML = "1 " + name + "coin = " + price + "
 }, 2000);
 
 function buy() {
-	coin += 1;
+	if (money <= -10000) {
+	money = money;	
+	coin =  coin;
+	} else {
 	money -= price;
+	coin += 1;
+	}
 	document.getElementById("money").innerHTML = "money: " + money + "$";
 	document.getElementById("coin").innerHTML = name + "coins: " + coin;
 }
