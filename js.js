@@ -1,8 +1,12 @@
 var name;
-var price = 0;
+var randomvar = 0;
 var money = 100;
 var coin = 0;
+var randommin;
+var randommax;
+var price
 
+randomvar = 10;
 
 function nameupdate() {
 	document.getElementById("money").innerHTML = "money: " + money + "$";
@@ -13,7 +17,7 @@ function nameupdate() {
 	document.getElementById("setup").style.display = "none";
 }
 
-setInterval(function(){ 
+setInterval(function(){
 price = Math.floor((Math.random() * 10000) + 0);
 document.getElementById("value").innerHTML = "1 " + name + "coin = " + price + "$";
 }, 2000);
