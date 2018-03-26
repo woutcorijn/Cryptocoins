@@ -1,4 +1,10 @@
 body {
+	font-family: 'Roboto', sans-serif;
+	margin: 0 auto;
+}
+
+#main {
+	margin:5px;
 }
 
 .txt {
@@ -52,9 +58,10 @@ text-align:center;
 .select {
 	background-color:#000;
 	color:white;
-	padding:5px;
-	margin:2px;
+	padding:3px;
+	margin:1px;
 	cursor:pointer;
+	
 }
 
 #game {
