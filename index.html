@@ -16,13 +16,17 @@
 					<li class="list"><img id="coinlogo" src="images/coin.png"></img></li>
 					</ul>
 					<br><br><br><br>
+					<p id="day">day: 0</p>
 					<p id="money">money: 100$</p>
 					<p  id="coin">coins: 0</p>
 					</div>
 					<div id="setup">
 					<br>
 					<p class="txt">Coin name:<input id="coinNameinp" type="text" name="coinName" maxlength="5"><br></p>
-					<a id="updatename" class="button" onclick="nameupdate()">Start</a>
+					<a class="select"  onclick="d20()">20 days</a>
+					<a class="select"  onclick="d50()">50 days</a>
+					<a class="select"  onclick="d100()">100 days</a>
+					<a class="select"  onclick="dinfinite()">infinite days</a>
 					</div>
 					<div id="game">
 					<p class="txt" id="value"></p>

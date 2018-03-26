@@ -29,6 +29,10 @@ body {
 	font-size:20px;
 }
 
+#day {
+	font-size:20px;
+}
+
 #namelogolist {
 	display:inline;
 	list-style-type: none;
@@ -47,10 +51,11 @@ padding:0px 2px;
 display:block;
 }
 
-#updatename {
+.select {
 	background-color:#000;
 	color:white;
 	padding:5px;
+	margin:2px;
 }
 
 #game {

@@ -5,22 +5,99 @@ var coin = 0;
 var randommin;
 var randommax;
 var price
+var days = 0;
+var daycount = 0;
 
-randomvar = 10;
 
-function nameupdate() {
+function d20() {
 	document.getElementById("money").innerHTML = "money: " + money + "$";
     name = document.getElementById("coinNameinp").value;
     document.getElementById("coinname").innerHTML = name + "coin";
 	document.getElementById("coin").innerHTML = name + "coins: " + coin;
 	document.getElementById("game").style.display = "block";
 	document.getElementById("setup").style.display = "none";
+	
+		setInterval(function(){
+			 days += 1;
+			 if (days >= 20) {
+				 price = 0;
+				 daycount += 0;
+			 } else {
+			 price = Math.floor((Math.random() * 10000) + 0);
+			 daycount += 1;
+			 }
+			  document.getElementById("value").innerHTML = "1 " + name + "coin = " + price + "$";
+			  document.getElementById("day").innerHTML = "day: " + daycount;
+			 }, 2000); 
 }
 
-setInterval(function(){
-price = Math.floor((Math.random() * 10000) + 0);
-document.getElementById("value").innerHTML = "1 " + name + "coin = " + price + "$";
-}, 2000);
+function d50() {
+	document.getElementById("money").innerHTML = "money: " + money + "$";
+    name = document.getElementById("coinNameinp").value;
+    document.getElementById("coinname").innerHTML = name + "coin";
+	document.getElementById("coin").innerHTML = name + "coins: " + coin;
+	document.getElementById("game").style.display = "block";
+	document.getElementById("setup").style.display = "none";
+	
+		setInterval(function(){
+			 days += 1;
+			 if (days >= 50) {
+				 price = 0;
+				 daycount += 0;
+			 } else {
+			 price = Math.floor((Math.random() * 10000) + 0);
+			 daycount += 1;
+			 }
+			  document.getElementById("value").innerHTML = "1 " + name + "coin = " + price + "$";
+			  document.getElementById("day").innerHTML = "day: " + daycount;
+			 }, 2000); 
+}
+
+
+function d100() {
+	document.getElementById("money").innerHTML = "money: " + money + "$";
+    name = document.getElementById("coinNameinp").value;
+    document.getElementById("coinname").innerHTML = name + "coin";
+	document.getElementById("coin").innerHTML = name + "coins: " + coin;
+	document.getElementById("game").style.display = "block";
+	document.getElementById("setup").style.display = "none";
+	
+		setInterval(function(){
+			 days += 1;
+			 if (days >= 100) {
+				 price = 0;
+				 daycount += 0;
+			 } else {
+			 price = Math.floor((Math.random() * 10000) + 0);
+			 daycount += 1;
+			 }
+			  document.getElementById("value").innerHTML = "1 " + name + "coin = " + price + "$";
+			  document.getElementById("day").innerHTML = "day: " + daycount;
+			 }, 2000); 
+}
+
+
+function dinfinite() {
+	document.getElementById("money").innerHTML = "money: " + money + "$";
+    name = document.getElementById("coinNameinp").value;
+    document.getElementById("coinname").innerHTML = name + "coin";
+	document.getElementById("coin").innerHTML = name + "coins: " + coin;
+	document.getElementById("game").style.display = "block";
+	document.getElementById("setup").style.display = "none";
+	
+		setInterval(function(){
+			 price = 0;
+			 price = Math.floor((Math.random() * 10000) + 0);
+			 daycount += 1;
+			  document.getElementById("value").innerHTML = "1 " + name + "coin = " + price + "$";
+			  document.getElementById("day").innerHTML = "day: " + daycount;
+			 }, 2000); 
+}
+
+
+
+ 
+
 
 function buy() {
 	if (money <= -10000) {
@@ -45,3 +122,5 @@ function sell() {
 	document.getElementById("money").innerHTML = "money: " + money + "$";
 	document.getElementById("coin").innerHTML = name + "coins: " + coin;
 }
+
+
