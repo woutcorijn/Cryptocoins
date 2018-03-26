@@ -96,7 +96,7 @@ function dinfinite() {
 	document.getElementById("coin").innerHTML = name + "coins: " + coin;
 	document.getElementById("game").style.display = "block";
 	document.getElementById("setup").style.display = "none";
-	document.getElementById("gamemode").innerHTML = "gamemode: infinite";
+	document.getElementById("gamemode").innerHTML = "gamemode: infinite days";
 	
 		setInterval(function(){
 			 price = 0;
