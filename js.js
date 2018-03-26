@@ -16,12 +16,16 @@ function d20() {
 	document.getElementById("coin").innerHTML = name + "coins: " + coin;
 	document.getElementById("game").style.display = "block";
 	document.getElementById("setup").style.display = "none";
+	document.getElementById("gamemode").innerHTML = "gamemode: 20 days";
 	
 		setInterval(function(){
 			 days += 1;
-			 if (days >= 20) {
+			 if (days >= 21) {
 				 price = 0;
 				 daycount += 0;
+				 document.getElementById("game").style.display = "none";
+				 document.getElementById("finalmoney").innerHTML = "money: " + money + "$";
+				 document.getElementById("finalmoney").style.display = "block";
 			 } else {
 			 price = Math.floor((Math.random() * 10000) + 0);
 			 daycount += 1;
@@ -38,12 +42,16 @@ function d50() {
 	document.getElementById("coin").innerHTML = name + "coins: " + coin;
 	document.getElementById("game").style.display = "block";
 	document.getElementById("setup").style.display = "none";
+	document.getElementById("gamemode").innerHTML = "gamemode: 50 days";
 	
 		setInterval(function(){
 			 days += 1;
-			 if (days >= 50) {
+			 if (days >= 51) {
 				 price = 0;
 				 daycount += 0;
+				 document.getElementById("game").style.display = "none";
+				 document.getElementById("finalmoney").innerHTML = "money: " + money + "$";
+				 	document.getElementById("finalmoney").style.display = "block";
 			 } else {
 			 price = Math.floor((Math.random() * 10000) + 0);
 			 daycount += 1;
@@ -61,12 +69,16 @@ function d100() {
 	document.getElementById("coin").innerHTML = name + "coins: " + coin;
 	document.getElementById("game").style.display = "block";
 	document.getElementById("setup").style.display = "none";
+	document.getElementById("gamemode").innerHTML = "gamemode: 100 days";
 	
 		setInterval(function(){
 			 days += 1;
-			 if (days >= 100) {
+			 if (days >= 101) {
 				 price = 0;
 				 daycount += 0;
+				 document.getElementById("game").style.display = "none";
+				 document.getElementById("finalmoney").innerHTML = "money: " + money + "$";
+				 document.getElementById("finalmoney").style.display = "block";
 			 } else {
 			 price = Math.floor((Math.random() * 10000) + 0);
 			 daycount += 1;
@@ -84,6 +96,7 @@ function dinfinite() {
 	document.getElementById("coin").innerHTML = name + "coins: " + coin;
 	document.getElementById("game").style.display = "block";
 	document.getElementById("setup").style.display = "none";
+	document.getElementById("gamemode").innerHTML = "gamemode: infinite";
 	
 		setInterval(function(){
 			 price = 0;
@@ -96,7 +109,6 @@ function dinfinite() {
 
 
 
- 
 
 
 function buy() {

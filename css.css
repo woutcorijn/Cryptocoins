@@ -21,15 +21,7 @@ body {
 	margin-top:8px;
 }
 
-#money {
-	font-size:20px;
-}
-
-#coin {
-	font-size:20px;
-}
-
-#day {
+.gamedata {
 	font-size:20px;
 }
 
@@ -51,11 +43,21 @@ padding:0px 2px;
 display:block;
 }
 
+#finalmoney {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size:70px;
+ display:none;
+}
+
 .select {
 	background-color:#000;
 	color:white;
 	padding:5px;
 	margin:2px;
+	cursor:pointer;
 }
 
 #game {
@@ -102,4 +104,11 @@ display:block;
 	display:inline;
 	font-size:30px;
 	cursor:pointer;
+}
+
+
+@media only screen and (min-device-width : 320px) and (max-device-width : 1024px) {
+		#finalmoney {
+	  font-size:20px;
+	}
 }
