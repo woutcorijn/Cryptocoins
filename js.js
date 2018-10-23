@@ -50,7 +50,7 @@ function d50() {
 				 price = 0;
 				 daycount += 0;
 				 document.getElementById("game").style.display = "none";
-				 document.getElementById("finalmoney").innerHTML = "money: " + money + "$";
+				  document.getElementById("finalmoney").innerHTML = "money: " + money + "$";
 				 	document.getElementById("finalmoney").style.display = "block";
 			 } else {
 			 price = Math.floor((Math.random() * 10000) + 0);
@@ -77,7 +77,7 @@ function d100() {
 				 price = 0;
 				 daycount += 0;
 				 document.getElementById("game").style.display = "none";
-				 document.getElementById("finalmoney").innerHTML = "money: " + money + "$";
+				document.getElementById("finalmoney").innerHTML = "money: " + money + "$";
 				 document.getElementById("finalmoney").style.display = "block";
 			 } else {
 			 price = Math.floor((Math.random() * 10000) + 0);
@@ -106,8 +106,6 @@ function dinfinite() {
 			  document.getElementById("day").innerHTML = "day: " + daycount;
 			 }, 2000); 
 }
-
-
 
 
 
