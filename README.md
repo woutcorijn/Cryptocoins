@@ -1,3 +1,3 @@
 # Cryptocoins
 <br>
-https://www.cryptocoingame.cf/
+https://woutcorijn.github.io/Cryptocoins/
