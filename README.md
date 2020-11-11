@@ -1,3 +1,3 @@
 # Cryptocoins
 <br>
-https://woutcorijn.github.io/Cryptocoins/
+https://cryptocoins.woutcorijn.com/
