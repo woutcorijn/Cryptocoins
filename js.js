@@ -6,114 +6,51 @@ var randommin;
 var randommax;
 var price
 var days = 0;
-var daycount = 0;
 
+if (localStorage.HighScoreString) {
+	 document.getElementById("HighScore").innerHTML = "High score: " + localStorage.HighScoreString;
+} else {
+	 localStorage.HighScoreString = 0;
+	 localStorage.HighScore = 0;
+	 document.getElementById("HighScore").innerHTML = "High score: " + localStorage.HighScoreString;
+}
 
-function d20() {
+function GameLoop(Time) {
 	document.getElementById("money").innerHTML = "money: " + money + "$";
     name = document.getElementById("coinNameinp").value;
     document.getElementById("coinname").innerHTML = name + "coin";
 	document.getElementById("coin").innerHTML = name + "coins: " + coin;
 	document.getElementById("game").style.display = "block";
 	document.getElementById("setup").style.display = "none";
-	document.getElementById("gamemode").innerHTML = "gamemode: 20 days";
-	
+
+	if(Time == Infinity) {
+	document.getElementById("gamemode").innerHTML = "gamemode: infinite days";
+} else {
+	document.getElementById("gamemode").innerHTML = "gamemode: " + Time + " days";
+}
+
 		setInterval(function(){
-			 days += 1;
-			 if (days >= 21) {
+			 if (days == Time) {
 				 price = 0;
-				 daycount += 0;
 				 document.getElementById("game").style.display = "none";
 				 document.getElementById("finalmoney").innerHTML = "money: " + money + "$";
 				 document.getElementById("finalmoney").style.display = "block";
+				 if(money > localStorage.HighScore) {
+					  localStorage.HighScore = money;
+				    localStorage.HighScoreString = money + "$ - " + Time + " Days";
+				    document.getElementById("HighScore").innerHTML = "High score: " + localStorage.HighScoreString;
+				}
 			 } else {
+			 days++;
 			 price = Math.floor((Math.random() * 10000) + 0);
-			 daycount += 1;
 			 }
 			  document.getElementById("value").innerHTML = "1 " + name + "coin = " + price + "$";
-			  document.getElementById("day").innerHTML = "day: " + daycount;
-			 }, 2000); 
+			  document.getElementById("day").innerHTML = "day: " +  days;
+			}, 2000);
 }
-
-function d50() {
-	document.getElementById("money").innerHTML = "money: " + money + "$";
-    name = document.getElementById("coinNameinp").value;
-    document.getElementById("coinname").innerHTML = name + "coin";
-	document.getElementById("coin").innerHTML = name + "coins: " + coin;
-	document.getElementById("game").style.display = "block";
-	document.getElementById("setup").style.display = "none";
-	document.getElementById("gamemode").innerHTML = "gamemode: 50 days";
-	
-		setInterval(function(){
-			 days += 1;
-			 if (days >= 51) {
-				 price = 0;
-				 daycount += 0;
-				 document.getElementById("game").style.display = "none";
-				  document.getElementById("finalmoney").innerHTML = "money: " + money + "$";
-				 	document.getElementById("finalmoney").style.display = "block";
-			 } else {
-			 price = Math.floor((Math.random() * 10000) + 0);
-			 daycount += 1;
-			 }
-			  document.getElementById("value").innerHTML = "1 " + name + "coin = " + price + "$";
-			  document.getElementById("day").innerHTML = "day: " + daycount;
-			 }, 2000); 
-}
-
-
-function d100() {
-	document.getElementById("money").innerHTML = "money: " + money + "$";
-    name = document.getElementById("coinNameinp").value;
-    document.getElementById("coinname").innerHTML = name + "coin";
-	document.getElementById("coin").innerHTML = name + "coins: " + coin;
-	document.getElementById("game").style.display = "block";
-	document.getElementById("setup").style.display = "none";
-	document.getElementById("gamemode").innerHTML = "gamemode: 100 days";
-	
-		setInterval(function(){
-			 days += 1;
-			 if (days >= 101) {
-				 price = 0;
-				 daycount += 0;
-				 document.getElementById("game").style.display = "none";
-				document.getElementById("finalmoney").innerHTML = "money: " + money + "$";
-				 document.getElementById("finalmoney").style.display = "block";
-			 } else {
-			 price = Math.floor((Math.random() * 10000) + 0);
-			 daycount += 1;
-			 }
-			  document.getElementById("value").innerHTML = "1 " + name + "coin = " + price + "$";
-			  document.getElementById("day").innerHTML = "day: " + daycount;
-			 }, 2000); 
-}
-
-
-function dinfinite() {
-	document.getElementById("money").innerHTML = "money: " + money + "$";
-    name = document.getElementById("coinNameinp").value;
-    document.getElementById("coinname").innerHTML = name + "coin";
-	document.getElementById("coin").innerHTML = name + "coins: " + coin;
-	document.getElementById("game").style.display = "block";
-	document.getElementById("setup").style.display = "none";
-	document.getElementById("gamemode").innerHTML = "gamemode: infinite days";
-	
-		setInterval(function(){
-			 price = 0;
-			 price = Math.floor((Math.random() * 10000) + 0);
-			 daycount += 1;
-			  document.getElementById("value").innerHTML = "1 " + name + "coin = " + price + "$";
-			  document.getElementById("day").innerHTML = "day: " + daycount;
-			 }, 2000); 
-}
-
-
 
 function buy() {
-	if (money <= -10000) {
-	money = money;	
-	coin =  coin;
-	} else {
+	if (money - price >= -15000) {
 	money -= price;
 	coin += 1;
 	}
@@ -122,15 +59,10 @@ function buy() {
 }
 
 function sell() {
-	if (coin <= 0) {
-	money = money;	
-	coin =  0;
-	} else {
+	if (coin > 0) {
 	money += price;
 	coin -= 1;
 	}
 	document.getElementById("money").innerHTML = "money: " + money + "$";
 	document.getElementById("coin").innerHTML = name + "coins: " + coin;
 }
-
-

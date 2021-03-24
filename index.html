@@ -1,7 +1,6 @@
 <!DOCKTYPE html>
 				<html>
 					<head>
-						<script src="js.js"></script>
 						<title>Cryptocoins</title>
 						<link rel="icon" href="images/coin.png">
 						<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -20,7 +19,7 @@
 					</ul>
 					</a>
 					<br><br><br><br>
-					<p class="gamedata" id="best">best score:</p>
+					<p class="gamedata" id="HighScore">High score:</p>
 					<p class="gamedata" id="gamemode">gamemode:</p>
 					<p class="gamedata" id="day">day: 0</p>
 					<p class="gamedata" id="money">money: 100$</p>
@@ -29,10 +28,10 @@
 					<div id="setup">
 					<br>
 					<p class="txt">Coin name:<input id="coinNameinp" type="text" name="coinName" maxlength="5"><br></p>
-					<a class="select"  onclick="d20()">20 days</a>
-					<a class="select"  onclick="d50()">50 days</a>
-					<a class="select"  onclick="d100()">100 days</a>
-					<a class="select"  onclick="dinfinite()">infinite days</a>
+					<a class="select"  onclick="GameLoop(20)">20 days</a>
+					<a class="select"  onclick="GameLoop(50)">50 days</a>
+					<a class="select"  onclick="GameLoop(100)">100 days</a>
+					<a class="select"  onclick="GameLoop(Infinity)">infinite days</a>
 					</div>
 					<div id="game">
 					<p class="txt" id="value">loading...</p>
@@ -40,10 +39,11 @@
 					<a id="sell" class="txt" onclick="sell()">sell</a>
 					</div>
 					<div id="aftergame">
-					<p id="finalmoney">money: 100$</p>
+					<div id="finalmoney">money: 100$</div>
 					</div>
 					<br><br><br>
 					<p id="madeby" >made by <a href="https://woutcorijn.com/">Wout Corijn</a></p>
 					</div>
 					</body>
+					<script src="js.js"></script>
 				</html>
